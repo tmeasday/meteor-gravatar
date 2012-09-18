@@ -12,7 +12,7 @@ Gravatar = {
     var hash = Gravatar.hash(email);
     var url = protocol + '://www.gravatar.com/avatar/' + hash;
     
-    var params = _.map(function(val, key) { return key + "=" + val}).join('&');
+    var params = _.map(options, function(val, key) { return key + "=" + val}).join('&');
     if (params !== '')
       url += '?' + params;
     
